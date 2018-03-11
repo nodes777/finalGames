@@ -12,39 +12,43 @@ let exampleData= [
 		count: 2
 	},
 	{
-		name: "pokemon",
+		name: "Pokemon Sun and Moon",
 		count: 5,
 	},
 	{
-		name: "FTL",
+		name: "Faster Than Light",
 		count: 7
 	},
 	{
-		name: "WoW",
+		name: "World of Warcraft",
 		count: 2
 	},
 	{
-		name: "asd",
+		name: "Metal Gear Solid: Snake Eater",
 		count: 3,
 	},
 	{
-		name: "sdf",
+		name: "Civilization 5",
 		count: 2
 	},
 	{
-		name: "dfg",
+		name: "Star Wars Battlefront 2",
 		count: 2
 	},
 	{
-		name: "fgh",
+		name: "Chrono Trigger",
 		count: 5,
 	},
 	{
-		name: "ghj",
+		name: "Super Mario 64",
 		count: 7
 	},
 	{
-		name: "ect",
+		name: "Stardew Valley",
+		count: 8
+	},
+	{
+		name: "Super Mario World",
 		count: 2
 	}
 ]
