@@ -1,0 +1,50 @@
+let exampleData= [
+	{
+		name: "Legend of Zelda Breath of the Wild",
+		count: 3,
+	},
+	{
+		name: "Spelunky",
+		count: 2
+	},
+	{
+		name: "Animal Crossing New Leaf",
+		count: 2
+	},
+	{
+		name: "pokemon",
+		count: 5,
+	},
+	{
+		name: "FTL",
+		count: 7
+	},
+	{
+		name: "WoW",
+		count: 2
+	},
+	{
+		name: "asd",
+		count: 3,
+	},
+	{
+		name: "sdf",
+		count: 2
+	},
+	{
+		name: "dfg",
+		count: 2
+	},
+	{
+		name: "fgh",
+		count: 5,
+	},
+	{
+		name: "ghj",
+		count: 7
+	},
+	{
+		name: "ect",
+		count: 2
+	}
+]
