@@ -1,54 +1,54 @@
 let exampleData= [
 	{
-		name: "Legend of Zelda Breath of the Wild",
-		count: 3,
+		"name": "Legend of Zelda Breath of the Wild",
+		"count": 3,
 	},
 	{
-		name: "Spelunky",
-		count: 2
+		"name": "Spelunky",
+		"count": 2
 	},
 	{
-		name: "Animal Crossing New Leaf",
-		count: 2
+		"name": "Animal Crossing New Leaf",
+		"count": 2
 	},
 	{
-		name: "Pokemon Sun and Moon",
-		count: 5,
+		"name": "Pokemon Sun and Moon",
+		"count": 5,
 	},
 	{
-		name: "Faster Than Light",
-		count: 7
+		"name": "Faster Than Light",
+		"count": 7
 	},
 	{
-		name: "World of Warcraft",
-		count: 2
+		"name": "World of Warcraft",
+		"count": 2
 	},
 	{
-		name: "Metal Gear Solid: Snake Eater",
-		count: 3,
+		"name": "Metal Gear Solid: Snake Eater",
+		"count": 3,
 	},
 	{
-		name: "Civilization 5",
-		count: 2
+		"name": "Civilization 5",
+		"count": 2
 	},
 	{
-		name: "Star Wars Battlefront 2",
-		count: 2
+		"name": "Star Wars Battlefront 2",
+		"count": 2
 	},
 	{
-		name: "Chrono Trigger",
-		count: 5,
+		"name": "Chrono Trigger",
+		"count": 5,
 	},
 	{
-		name: "Super Mario 64",
-		count: 7
+		"name": "Super Mario 64",
+		"count": 7
 	},
 	{
-		name: "Stardew Valley",
-		count: 8
+		"name": "Stardew Valley",
+		"count": 8
 	},
 	{
-		name: "Super Mario World",
-		count: 2
+		"name": "Super Mario World",
+		"count": 2
 	}
 ]

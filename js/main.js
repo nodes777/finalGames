@@ -3,12 +3,14 @@ var data = exampleData;
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 60*exampleData.length - margin.top - margin.bottom;
- var axisMargin = 20,
+var axisMargin = 20,
             margin2 = 40;
 var labelWidth = 0;
 var barPadding = 5;
 var barHeight = 20;//(height-axisMargin-margin*2)* 0.4/data.length;
 var valueMargin = 4;
+var vertBarCenter = 18;
+
 // set the ranges
 var y = d3.scaleBand()
           .range([height, 0])
@@ -25,7 +27,7 @@ var svg = d3.select("#chart").append("svg")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(10, 0)");
 
   // format the data
   data.forEach(function(d) {
@@ -37,20 +39,9 @@ var svg = d3.select("#chart").append("svg")
   // Scale the range of the data in the domains
   x.domain([0, d3.max(data, function(d){ return d.count; })])
   y.domain(data.map(function(d) { return d.name; }));
-  //y.domain([0, d3.max(data, function(d) { return d.count; })]);
 
   // append the rectangles for the bar chart
-/* let bar = svg.selectAll(".bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      //.attr("x", function(d) { return x(d.count); })
-      .attr("width", function(d) {return x(d.count); } )
-      .attr("y", function(d) { return y(d.name); })
-      .attr("height", y.bandwidth());
-
-*/
- bar = svg.selectAll("g")
+  bar = svg.selectAll("g")
             .data(data)
             .enter()
             .append("g");
@@ -58,19 +49,21 @@ var svg = d3.select("#chart").append("svg")
     bar.attr("class", "bar")
             .attr("cx",0)
             .attr("transform", function(d, i) {
-                return "translate(" + margin.left + "," + (i * (y.bandwidth() + barPadding) + barPadding) + ")";
+                return "translate(0," + (i * (y.bandwidth() + barPadding) + barPadding) + ")";
             });
 
+    // Add Bar
     bar.append("rect")
-            .attr("transform", "translate("+labelWidth+", 0)")
+            .attr("transform", `translate(${labelWidth}, 15)`)
             .attr("height", y.bandwidth())
             .attr("width", function(d) {return x(d.count)});
 
+    // Add Game Name
      bar.append("text")
             .attr("class", "value")
             .attr("y", y.bandwidth()/2)
             .attr("dx", -valueMargin + labelWidth) //margin right
-            .attr("dy", ".35em") //vertical align middle
+            .attr("dy", `${vertBarCenter}px`) //vertical align middle
             .attr("text-anchor", "end")
             .text(function(d){
                 return (d.name);
@@ -80,38 +73,34 @@ var svg = d3.select("#chart").append("svg")
                 return Math.max(width + valueMargin);
             });
 
-/*
-var bar = svg.selectAll("g")
-    .data(data)
-  .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + y.bandwidth()*i + ")"; });
+    // Add number of times chosen
+    bar.append("text")
+            .attr("class", "value")
+            .attr("y", y.bandwidth()/2)
+            .attr("dx", function(d) {return x(d.count) - 20}) //margin right
+            .attr("dy", `${vertBarCenter}px`) //vertical align middle
+            .attr("text-anchor", "end")
+            .text(function(d){
+                return (d.count);
+            }).style("fill", "#ffffff")
+            .attr("x", function(d){
+                var width = this.getBBox().width;
+                return Math.max(width + valueMargin);
+            });
 
-bar.append("rect")
-	.attr("class", "bar")
-      //.attr("x", function(d) { return x(d.count); })
-      .attr("width", function(d) {return x(d.count); } )
-      .attr("y", function(d) { return y(d.name); })
-      .attr("height", y.bandwidth());
-
-bar.append("text")
-    .attr("dy", ".3em")
-    .text(function(d) { return d.name; });
-*/
- /*bar.append("text")
-    .attr("class", "below")
-    .attr("dy", "1.2em")
-    .attr("text-anchor", "left")
-    .text(function(d) { return d.name; })
-    .style("fill", "#000000");
-*/
-
-  // add the x Axis
+  // add the x Axis bottom
   svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
+      .attr("transform", `translate(0, ${height+5})`)
+      .call(d3.axisBottom(x));
+
+  // add the x Axis top
+  svg.append("g")
+      //.attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
 
   // add the y Axis
-  svg.append("g")
+  /*svg.append("g")
   	  //.attr("transform", "translate("+200+", 0)")
       .call(d3.axisLeft(y));
+      */
 
