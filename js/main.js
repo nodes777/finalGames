@@ -23,7 +23,7 @@ var x = d3.scaleLinear()
 // append a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
 var svg = d3.select("#chart").append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", getWidthOfGraph('#chart') + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
@@ -39,6 +39,15 @@ var svg = d3.select("#chart").append("svg")
   // Scale the range of the data in the domains
   x.domain([0, d3.max(data, function(d){ return d.count; })])
   y.domain(data.map(function(d) { return d.name; }));
+
+  // Tooltip
+  var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+  // gameInfoDiv
+  var gameInfoDiv = d3.select("#gameInfo");
+
 
   // append the rectangles for the bar chart
   bar = svg.selectAll("g")
@@ -87,6 +96,28 @@ var svg = d3.select("#chart").append("svg")
                 var width = this.getBBox().width;
                 return Math.max(width + valueMargin);
             });
+
+    // Tooltip functionality
+    bar.on("mouseover", function(d) {
+       tooltip.transition()
+         .duration(200)
+         .style("opacity", .9);
+       tooltip.html(d.name)
+         .style("left", (d3.event.pageX) + "px")
+         .style("top", (d3.event.pageY - 28) + "px");
+       })
+     .on("mouseout", function(d) {
+       tooltip.transition()
+         .duration(500)
+         .style("opacity", 0);
+       });
+
+    // Click functionality
+    bar.on("click", function(d) {
+        gameInfoDiv.transition()
+          .style("opacity", 1)
+        gameInfoDiv.html(JSON.stringify(d))
+       })
 
   // add the x Axis bottom
   svg.append("g")

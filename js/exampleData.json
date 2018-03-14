@@ -2,6 +2,7 @@ let exampleData= [
 	{
 		"name": "Legend of Zelda Breath of the Wild",
 		"count": 3,
+		"Devs": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
 	},
 	{
 		"name": "Spelunky",
