@@ -2,54 +2,66 @@ let exampleData= [
 	{
 		"name": "Legend of Zelda Breath of the Wild",
 		"count": 3,
-		"Devs": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
+		"devs": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
 	},
 	{
 		"name": "Spelunky",
-		"count": 2
+		"count": 2,
+		"devs": ["Jason Fakeman","Marco Polo"],
 	},
 	{
 		"name": "Animal Crossing New Leaf",
-		"count": 2
+		"count": 2,
+		"devs": ["Jason Fakeman","Marco Polo"],
 	},
 	{
 		"name": "Pokemon Sun and Moon",
 		"count": 5,
+		"devs": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Karate McJones", "Mary Michaelstein"],
 	},
 	{
 		"name": "Faster Than Light",
-		"count": 7
+		"count": 7,
+		"devs": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
 	},
 	{
 		"name": "World of Warcraft",
-		"count": 2
+		"count": 2,
+		"devs": ["Jason Fakeman","Marco Polo"],
 	},
 	{
 		"name": "Metal Gear Solid: Snake Eater",
 		"count": 3,
+		"devs": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
 	},
 	{
 		"name": "Civilization 5",
-		"count": 2
+		"count": 2,
+		"devs": ["Jason Fakeman","Marco Polo"],
 	},
 	{
-		"name": "Star Wars Battlefront 2",
-		"count": 2
+		"name": "Star Wars Battlefront (2005) ",
+		"count": 2,
+		"devs": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
 	},
 	{
 		"name": "Chrono Trigger",
 		"count": 5,
+		"devs": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Tim Minchin"],
 	},
 	{
 		"name": "Super Mario 64",
-		"count": 7
+		"count": 7,
+		"devs": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
 	},
 	{
 		"name": "Stardew Valley",
-		"count": 8
+		"count": 8,
+		"devs": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob", "Art Garfinkle"],
 	},
 	{
 		"name": "Super Mario World",
-		"count": 2
+		"count": 2,
+		"devs": ["Suzy Numbleton", "Jason Fakeman"],
 	}
 ]

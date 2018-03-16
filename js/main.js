@@ -112,11 +112,22 @@ var svg = d3.select("#chart").append("svg")
          .style("opacity", 0);
        });
 
+     bar.on("mouseover", function() {
+            d3.select(this)
+              .style("opacity", .9);
+        })
+        .on("mouseout", function(d) {
+            d3.select(this)
+              .style("opacity", 1);
+       })
+
+
     // Click functionality
     bar.on("click", function(d) {
         gameInfoDiv.transition()
           .style("opacity", 1)
-        gameInfoDiv.html(JSON.stringify(d))
+        //gameInfoDiv.html(JSON.stringify(d))
+        updateGameInfoDiv(d, gameInfoDiv);
        })
 
   // add the x Axis bottom
