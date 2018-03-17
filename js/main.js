@@ -31,7 +31,7 @@ var svg = d3.select("#chart").append("svg")
 
   // format the data
   data.forEach(function(d) {
-    d.count = +d.count;
+    d.count = +d.guests.length;
   });
 
   data.sort(function(a, b){return a.count - b.count});
@@ -50,25 +50,28 @@ var svg = d3.select("#chart").append("svg")
 
 
   // append the rectangles for the bar chart
-  bar = svg.selectAll("g")
+  bars = svg.selectAll("g")
             .data(data)
             .enter()
             .append("g");
 
-    bar.attr("class", "bar")
+    bars.attr("class", "bar")
             .attr("cx",0)
             .attr("transform", function(d, i) {
                 return "translate(0," + (i * (y.bandwidth() + barPadding) + barPadding) + ")";
             });
 
     // Add Bar
-    bar.append("rect")
+    var growbar = bars.append("rect")
             .attr("transform", `translate(${labelWidth}, 15)`)
-            .attr("height", y.bandwidth())
-            .attr("width", function(d) {return x(d.count)});
+            .attr("height", y.bandwidth());
 
+    // Do transition on width only
+    growbar.transition().duration(2000)
+            .attr("width", function(d) {return x(d.count)});
+    
     // Add Game Name
-     bar.append("text")
+     bars.append("text")
             .attr("class", "value")
             .attr("y", y.bandwidth()/2)
             .attr("dx", -valueMargin + labelWidth) //margin right
@@ -83,7 +86,7 @@ var svg = d3.select("#chart").append("svg")
             });
 
     // Add number of times chosen
-    bar.append("text")
+    bars.append("text")
             .attr("class", "value")
             .attr("y", y.bandwidth()/2)
             .attr("dx", function(d) {return x(d.count) - 20}) //margin right
@@ -98,7 +101,7 @@ var svg = d3.select("#chart").append("svg")
             });
 
     // Tooltip functionality
-    bar.on("mouseover", function(d) {
+    bars.on("mouseover", function(d) {
        tooltip.transition()
          .duration(200)
          .style("opacity", .9);
@@ -112,7 +115,8 @@ var svg = d3.select("#chart").append("svg")
          .style("opacity", 0);
        });
 
-     bar.on("mouseover", function() {
+    // Fade bars on hover
+     bars.on("mouseover", function() {
             d3.select(this)
               .style("opacity", .9);
         })
@@ -121,13 +125,16 @@ var svg = d3.select("#chart").append("svg")
               .style("opacity", 1);
        })
 
-
     // Click functionality
-    bar.on("click", function(d) {
+    bars.on("click", function(d) {
         gameInfoDiv.transition()
+          .style("opacity", 0)
+          .transition()
+          .on("end", function(){
+            updateGameInfoDiv(d, gameInfoDiv);
+          })
+          .transition()
           .style("opacity", 1)
-        //gameInfoDiv.html(JSON.stringify(d))
-        updateGameInfoDiv(d, gameInfoDiv);
        })
 
   // add the x Axis bottom

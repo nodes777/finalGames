@@ -26,10 +26,18 @@ div.tooltip {
 	opacity: 0;
 }
 
+h2{
+	margin-top: 0px;
+}
 
+#chart{
+	margin-top: 5px;
+}
 
-
-
+/*Overwrite the bootstrap jumbotron class*/
+.jumbotron{
+	padding: 10px;
+}
 
 
 
