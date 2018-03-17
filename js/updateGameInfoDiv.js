@@ -9,7 +9,7 @@ function updateGameInfoDiv(game, div){
 	  </div>
 	`;
 
-	makeGiantBombAjaxReq(game.name)
+	let data = makeGiantBombAjaxReq(game.guid)
 
 	//Append the new data
 	div.appendHTML(some_html);

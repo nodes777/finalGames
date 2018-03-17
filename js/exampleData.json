@@ -2,53 +2,66 @@ let exampleData = [
 	{
 		"name": "Legend of Zelda Breath of the Wild",
 		"guests": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
+		"guid": "3030-41355",
 	},
 	{
 		"name": "Spelunky",
 		"guests": ["Jason Fakeman","Marco Polo"],
+		"guid": "3025-4013",
 	},
 	{
 		"name": "Animal Crossing New Leaf",
 		"guests": ["Jason Fakeman","Marco Polo"],
+		"guid": "3030-31752",
 	},
 	{
 		"name": "Pokemon Sun and Moon",
 		"guests": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Karate McJones", "Mary Michaelstein"],
+		"guid": "3030-52769",
 	},
 	{
 		"name": "Faster Than Light",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
+		"guid": "3030-37770",
 	},
 	{
 		"name": "World of Warcraft",
 		"guests": ["Jason Fakeman","Marco Polo"],
+		"guid": "3030-19783",
 	},
 	{
 		"name": "Metal Gear Solid: Snake Eater",
 		"guests": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],
+		"guid": "3030-31738",
 	},
 	{
 		"name": "Civilization 5",
 		"guests": ["Jason Fakeman","Marco Polo"],
+		"guid": "3030-30057",
 	},
 	{
-		"name": "Star Wars Battlefront (2005) ",
+		"name": "Star Wars Battlefront 2 (2005) ",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
+		"guid": "3030-53692",
 	},
 	{
 		"name": "Chrono Trigger",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Tim Minchin"],
+		"guid": "3030-9249",
 	},
 	{
 		"name": "Super Mario 64",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
+		"guid": "3030-2931",
 	},
 	{
 		"name": "Stardew Valley",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob", "Art Garfinkle"],
+		"guid": "3030-50899",
 	},
 	{
 		"name": "Super Mario World",
 		"guests": ["Suzy Numbleton", "Jason Fakeman"],
+		"guid": "3030-1334",
 	}
 ]
