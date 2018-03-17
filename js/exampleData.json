@@ -1,4 +1,4 @@
-let exampleData= [
+let exampleData = [
 	{
 		"name": "Legend of Zelda Breath of the Wild",
 		"guests": ["Jason Fakeman","Marco Polo", "Jeremy Blaustein"],

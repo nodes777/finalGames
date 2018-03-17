@@ -7,7 +7,7 @@ const margin = {top: 20, right: 20, bottom: 30, left: 40},
 const labelWidth = 0;
 const barPadding = 5;
 
-const valueMargin = 4;
+const valueMargin = 1;
 const vertBarCenter = 18;
 
 // set the ranges
@@ -70,12 +70,12 @@ let svg = d3.select("#chart").append("svg")
     // Do transition on width only
     growbar.transition().duration(2000)
             .attr("width", function(d) {return x(d.count)});
-    
+
     // Add Game Name
      bars.append("text")
             .attr("class", "value")
             .attr("y", y.bandwidth()/2)
-            .attr("dx", -valueMargin + labelWidth) //margin right
+            .attr("dx", 10) //margin right
             .attr("dy", `${vertBarCenter}px`) //vertical align middle
             .attr("text-anchor", "end")
             .text(function(d){

@@ -4,16 +4,15 @@ function updateGameInfoDiv(game, div){
 
 	const some_html = `
 	  <div class="module">
-	    <h2>Picked By:</h2>
-	    <p>${game.guests}</p>
+	    <h3>Picked By:</h3>
+	    <p>${game.guests.join(", ")}</p>
 	  </div>
 	`;
 
+	makeGiantBombAjaxReq(game.name)
+
 	//Append the new data
-	div.append("div")
-		.selectAll('li')
-		.data(game.guests)
-		.enter()
-		.append('li')
-		.html(String);
+	div.appendHTML(some_html);
+	//div.appendHTML(gBomb.results[0].deck)
+
 }

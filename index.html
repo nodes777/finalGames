@@ -10,15 +10,23 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/regular.css" integrity="sha384-A/oR8MwZKeyJS+Y0tLZ16QIyje/AmPduwrvjeH6NLiLsp4cdE4uRJl8zobWXBm4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
     </head>
     <body>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1>Final Games Picks!</h1>
+        <p>This is a record of the games chosen by games industry veterans on the Final Games podcasts. Liam Edwards interviews guests before leaving them stranded on a deserted "island" with their favorite eight games. Below are the games chosen sorted by frequency on the show</p>
+        <a class="btn btn-primary btn-md" href="https://soundcloud.com/finalgamespodcast" role="button"><i class="fab fa-soundcloud"></i> SoundCloud</a>
+        <a class="btn btn-primary btn-md" href="https://twitter.com/finalgamesshow?lang=en" role="button"><i class="fab fa-twitter"></i> Twitter </a>
+        <a class="btn btn-primary btn-md" href="https://www.patreon.com/finalgames" role="button"><i class="fab fa-patreon"></i> Patreon </a>
       </div>
     </div>
 
@@ -26,12 +34,12 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-9" id="chart">
-          
+
         </div>
         <div class="col-md-3">
           <h2>Game Info:</h2>
           <div class="gameInfo" id="gameInfo">
-            
+
           </div>
         </div>
       </div>
@@ -47,6 +55,8 @@
         <script src="js/vendor/d3.v4.min.js"></script>
 
         <script src="js/exampleData.json"></script>
+        <script src="js/exampleGiantBombJSONResponse.json"></script>
+        <script src="js/fetchGiantBomb.js"></script>
         <script src="js/updateGameInfoDiv.js"></script>
         <script src="js/utils.js"></script>
         <script src="js/main.js"></script>
