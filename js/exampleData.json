@@ -7,7 +7,7 @@ let exampleData = [
 	{
 		"name": "Spelunky",
 		"guests": ["Jason Fakeman","Marco Polo"],
-		"guid": "3025-4013",
+		"guid": "3030-24999",
 	},
 	{
 		"name": "Animal Crossing New Leaf",
@@ -42,7 +42,7 @@ let exampleData = [
 	{
 		"name": "Star Wars Battlefront 2 (2005) ",
 		"guests": ["Suzy Numbleton", "Jason Fakeman","Marco Polo", "Jeremy Blaustein", "Mary Michaelstein", "Pasta Ulricht", "Dog Bob"],
-		"guid": "3030-53692",
+		"guid": "3030-7094",
 	},
 	{
 		"name": "Chrono Trigger",
