@@ -53,6 +53,7 @@ function makeGiantBombAjaxReq(game) {
 	   	// }
 	   	let html = buildHTML(data, game.guests)
 		renderNewGameInfo(html)
+		document.getElementById("gameInfo").scrollIntoView({behavior: "smooth"});
 	}).fail(function() {
 	  alert("error");
 	})
